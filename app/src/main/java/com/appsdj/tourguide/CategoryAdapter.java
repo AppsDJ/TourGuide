@@ -53,13 +53,13 @@ public class CategoryAdapter extends FragmentPagerAdapter {
     @Override
     public CharSequence getPageTitle(int position) {
         if (position == 0) {
-            return mContext.getString(R.string.category_numbers);
+            return mContext.getString(R.string.category_food);
         } else if (position == 1) {
-            return mContext.getString(R.string.category_family);
+            return mContext.getString(R.string.category_drink);
         } else if (position == 2) {
-            return mContext.getString(R.string.category_colors);
+            return mContext.getString(R.string.category_shop);
         } else {
-            return mContext.getString(R.string.category_phrases);
+            return mContext.getString(R.string.category_fun);
         }
     }
 }

@@ -30,13 +30,13 @@
             </intent-filter>
         </activity>
         <activity android:name=".FoodActivity"
-            android:label="@string/category_numbers"/>
+            android:label="@string/category_food"/>
         <activity android:name=".FunActivity"
-            android:label="@string/category_phrases" />
+            android:label="@string/category_fun" />
         <activity android:name=".DrinkActivity"
-            android:label="@string/category_family" />
+            android:label="@string/category_drink" />
         <activity android:name=".ShopActivity"
-            android:label="@string/category_colors" />
+            android:label="@string/category_shop" />
     </application>
 
 </manifest>

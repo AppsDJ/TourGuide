@@ -1,15 +1,11 @@
 package com.appsdj.tourguide;
 
 
-import android.content.Context;
-import android.media.AudioManager;
-import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -32,7 +28,7 @@ public class DrinkFragment extends Fragment {
         attractions.add(new Attraction("Yeh Rah", "Fantastic Thai and Asian cusine", "Liverpool One", "5 Wall St, Liverpool L1 8JQ", "0151 655 1003"));
         attractions.add(new Attraction("McDonald's", "Last resort stomach filler", "Liverpool One", "5 Wall St, Liverpool L1 8JQ", "0151 655 1004"));
 
-        AttractionAdapter adapter = new AttractionAdapter(getActivity(), attractions, R.color.category_family);
+        AttractionAdapter adapter = new AttractionAdapter(getActivity(), attractions, R.color.category_drink);
         ListView listView = (ListView) rootView.findViewById(R.id.list);
 
         listView.setAdapter(adapter);

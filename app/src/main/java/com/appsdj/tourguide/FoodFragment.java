@@ -1,14 +1,10 @@
 package com.appsdj.tourguide;
 
-import android.content.Context;
-import android.media.AudioManager;
-import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -35,7 +31,7 @@ public class FoodFragment extends Fragment {
         attractions.add(new Attraction("Cozy Club", "Posh alternative to McDonald's",
                 "Liverpool One", "5 Wall St, Liverpool L1 8JQ", "0151 655 1001"));
 
-        AttractionAdapter adapter = new AttractionAdapter(getActivity(), attractions, R.color.category_family);
+        AttractionAdapter adapter = new AttractionAdapter(getActivity(), attractions, R.color.category_drink);
         ListView listView = (ListView) rootView.findViewById(R.id.list);
 
         // Make the {@link ListView} use the {@link WordAdapter} we created above, so that the
