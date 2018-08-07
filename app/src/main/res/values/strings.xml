@@ -1,0 +1,19 @@
+<resources>
+    <!-- Title for the application -->
+    <string name="app_name">Tour Guide Liverpool</string>
+
+    <!-- Category name for Food -->
+    <string name="category_numbers">Food</string>
+
+    <!-- Category name for Drink -->
+    <string name="category_family">Drink</string>
+
+    <!-- Category name for Shop -->
+    <string name="category_colors">Shop</string>
+
+    <!-- Category name for Fun -->
+    <string name="category_phrases">Fun</string>
+
+
+
+</resources>
