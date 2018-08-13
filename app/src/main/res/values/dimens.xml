@@ -1,3 +1,5 @@
 <resources>
     <dimen name="list_item_height">165dp</dimen>
+    <dimen name="list_item_image_height">101dp</dimen>
+    <dimen name="list_item_image_widht">101dp</dimen>
 </resources>

@@ -9,6 +9,8 @@ public class FunActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_category);
+
+        // get corresponding fragment to be displayed in container layout for activity
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.container, new FunFragment())
                 .commit();

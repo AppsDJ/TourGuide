@@ -7,15 +7,15 @@ public class Attraction {
     private String mAttractionAddress1;
     private String mAttractionAddress2;
     private String mTelephonNO;
-    private int mImageResourceID = NO_IMAGE_PROVIDED;
-    private static final int NO_IMAGE_PROVIDED = -1;
+    private int mImageResourceID;
 
-    public Attraction(String mAttractionName, String mAttractionDescription, String mAttractionAddress1, String mAttractionAddress2, String mTelephonNO) {
+    public Attraction(String mAttractionName, String mAttractionDescription, String mAttractionAddress1, String mAttractionAddress2, String mTelephonNO, int mImageResourceID) {
         this.mAttractionName = mAttractionName;
         this.mAttractionDescription = mAttractionDescription;
         this.mAttractionAddress1 = mAttractionAddress1;
         this.mAttractionAddress2 = mAttractionAddress2;
         this.mTelephonNO = mTelephonNO;
+        this.mImageResourceID = mImageResourceID;
     }
 
     public void setmAttractionDescription(String mAttractionDescription) {
@@ -62,7 +62,4 @@ public class Attraction {
         return mImageResourceID;
     }
 
-    public boolean hasImage() {
-        return mImageResourceID != NO_IMAGE_PROVIDED;
-    }
 }

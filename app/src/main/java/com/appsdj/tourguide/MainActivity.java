@@ -10,20 +10,21 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        // Set the content of the activity to use the activity_main.xml layout file
         setContentView(R.layout.activity_main);
 
-        // Find the view pager that will allow the user to swipe between fragments
+        // get viewpager used for sliding between fragments
         ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
 
-        // Create an adapter that knows which fragment should be shown on each page
+        // get category adapter that will retrieve corresponding fragments
         CategoryAdapter adapter = new CategoryAdapter(this, getSupportFragmentManager());
 
-        // Set the adapter onto the view pager
+        // set the adapter for the viewpager
         viewPager.setAdapter(adapter);
 
-        // Find the tab layout that shows the tabs
+        // get the tab layout that will be the type of display used
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
+
+        // make use of viewpager within the tab layout
         tabLayout.setupWithViewPager(viewPager);
     }
 }

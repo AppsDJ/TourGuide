@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <resources>
-    <color name="primary_color">#16afca</color>
-    <color name="primary_dark_color">#2F1D1A</color>
+    <color name="primary_color">#00618e</color>
+    <color name="primary_dark_color">#00618e</color>
     <color name="background">#FFFFFF</color>
-    <color name="category_food">#FFFFFF</color>
-    <color name="category_drink">#FFFFFF</color>
-    <color name="category_shop">#FFFFFF</color>
-    <color name="category_fun">#FFFFFF</color>
+
+    <color name="food_background">#ede8e4</color>
+    <color name="category_food">#ede8e4</color>
+
+    <color name="drink_background">#e4eaed</color>
+    <color name="category_drink">#e4eaed</color>
+
+    <color name="shop_background">#e4e5ed</color>
+    <color name="category_shop">#e4e5ed</color>
+
+    <color name="fun_background">#e4ede4</color>
+    <color name="category_fun">#e4ede4</color>
 </resources>

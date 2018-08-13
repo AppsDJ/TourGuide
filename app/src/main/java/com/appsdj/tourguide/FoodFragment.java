@@ -16,37 +16,27 @@ public class FoodFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+
         View rootView = inflater.inflate(R.layout.attraction_list, container, false);
 
         final ArrayList<Attraction> attractions = new ArrayList<Attraction>();
 
-        attractions.add(new Attraction("Wagamama", "Delicious Chinese food",
-                "Liverpool One", "5 Wall St, Liverpool L1 8JQ", "0151 655 1001"));
+        // Add new items in the list of Attractions
         attractions.add(new Attraction("Zizzi", "Amazing pizza and pasta",
-                "Liverpool One", "5 Wall St, Liverpool L1 8JQ", "0151 655 1001"));
-        attractions.add(new Attraction("Yeh Rah", "Fantastic Thai and Asian cusine",
-                "Liverpool One", "5 Wall St, Liverpool L1 8JQ", "0151 655 1001"));
-        attractions.add(new Attraction("Cozy Club", "Posh alternative to McDonald's",
-                "Liverpool One", "5 Wall St, Liverpool L1 8JQ", "0151 655 1001"));
+                "Liverpool One", "6 Wall St, Liverpool L1 8JQ", "0151 655 1002", R.drawable.zizzi_logo));
+        attractions.add(new Attraction("Cozy Club", "McDonald's posh alternative",
+                "Liverpool One", "8 Wall St, Liverpool L1 8JQ", "0151 655 1004", R.drawable.cosy_club_logo));
+        attractions.add(new Attraction("Yeh Rah", "Fantastic Thai cusine",
+                "Liverpool One", "7 Wall St, Liverpool L1 8JQ", "0151 655 1003", R.drawable.yee_logo));
+        attractions.add(new Attraction("Wagamama", "Delicious Chinese food",
+                "Liverpool One", "5 Wall St, Liverpool L1 8JQ", "0151 655 1001", R.drawable.wagamama_logo));
 
-        AttractionAdapter adapter = new AttractionAdapter(getActivity(), attractions, R.color.category_drink);
+        // create the adapter which will handle the list of attractions
+        AttractionAdapter adapter = new AttractionAdapter(getActivity(), attractions, R.color.category_food, R.color.food_background);
+
         ListView listView = (ListView) rootView.findViewById(R.id.list);
-
-        // Make the {@link ListView} use the {@link WordAdapter} we created above, so that the
-        // {@link ListView} will display list items for each {@link Word} in the list.
         listView.setAdapter(adapter);
-//
-//        // Set a click listener to play the audio when the list item is clicked on
-//        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//            @Override
-//            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
-//
-//                // Get the Attraction object at the particular position clicked
-//                Attraction attraction = attractions.get(position);
-//            }
-//        });
 
         return rootView;
     }

@@ -14,16 +14,18 @@ import java.util.ArrayList;
 public class AttractionAdapter extends ArrayAdapter<Attraction> {
 
     private int mColourResourceID;
+    private int mBackgroundColorID;
 
-    public AttractionAdapter(Activity context, ArrayList<Attraction> attractions, int colourResourceID) {
-
+    public AttractionAdapter(Activity context, ArrayList<Attraction> attractions, int colourResourceID, int backgroundColorID) {
         super(context, 0, attractions);
         mColourResourceID = colourResourceID;
+        mBackgroundColorID = backgroundColorID;
     }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        // Check if the existing view is being reused, otherwise inflate the view
+
+        // if the existing view is not reused, inflate the view
         View listItemView = convertView;
         if(listItemView == null) {
             listItemView = LayoutInflater.from(getContext()).inflate(
@@ -32,50 +34,32 @@ public class AttractionAdapter extends ArrayAdapter<Attraction> {
 
         Attraction currentAttraction = getItem(position);
 
-        // Find the TextView in the list_item.xml layout with the ID version_name
-        TextView attractionName = (TextView) listItemView.findViewById(R.id.attraction_name_text_view);
-        // Get the version name from the current AndroidFlavor object and
-        // set this text on the name TextView
-        attractionName.setText(currentAttraction.getmAttractionName());
+        /*
+         * Find the respective views in the list_item.xml and set their corresponding values
+         */
+        ((TextView) listItemView.findViewById(R.id.attraction_name_text_view)).setText(currentAttraction.getmAttractionName());
 
-        // Find the TextView in the list_item.xml layout with the ID version_number
-        TextView attractionDescription = (TextView) listItemView.findViewById(R.id.attraction_description_text_view);
-        // Get the version number from the current AndroidFlavor object and
-        // set this text on the number TextView
-        attractionDescription.setText(currentAttraction.getmAttractionDescription());
+        ((TextView) listItemView.findViewById(R.id.attraction_description_text_view)).setText(currentAttraction.getmAttractionDescription());
 
-        // Find the TextView in the list_item.xml layout with the ID version_number
-        TextView addressLine1TextView = (TextView) listItemView.findViewById(R.id.attraction_address_line1_text_view);
-        // Get the version number from the current AndroidFlavor object and
-        // set this text on the number TextView
-        addressLine1TextView.setText(currentAttraction.getmAttractionAddress1());
-        // Find the TextView in the list_item.xml layout with the ID version_number
+        ((TextView) listItemView.findViewById(R.id.attraction_address_line1_text_view)).setText(currentAttraction.getmAttractionAddress1());
 
-        TextView addressLine2TextView = (TextView) listItemView.findViewById(R.id.attraction_address_line2_text_view);
-        // Get the version number from the current AndroidFlavor object and
-        // set this text on the number TextView
-        addressLine2TextView.setText(currentAttraction.getmAttractionAddress2());
+        ((TextView) listItemView.findViewById(R.id.attraction_address_line2_text_view)).setText(currentAttraction.getmAttractionAddress2());
 
-        TextView telephonNOTextView = (TextView) listItemView.findViewById(R.id.attraction_telephone_text_view);
-        // Get the version number from the current AndroidFlavor object and
-        // set this text on the number TextView
-        telephonNOTextView.setText(currentAttraction.getmTelephonNO());
+        ((TextView) listItemView.findViewById(R.id.attraction_telephone_text_view)).setText(currentAttraction.getmTelephonNO());
+
 
         ImageView imageView = (ImageView) listItemView.findViewById(R.id.attraction_image);
+        imageView.setImageResource(currentAttraction.getImageResourceID());
 
-        if (currentAttraction.hasImage()) {
-            imageView.setImageResource(currentAttraction.getImageResourceID());
-            // make sure the image is visible
-            imageView.setVisibility(View.VISIBLE);
-        } else {
-            // otherwise make sure image is not visible (GONE so no space left by absence)
-            imageView.setVisibility(View.GONE);
-        }
+        /* retrieve the image of an attraction and set its bg. color to be the same as
+         * its description bg. color
+         */
+        int imageBackgroundColor = ContextCompat.getColor(getContext(), mBackgroundColorID);
+        imageView.setBackgroundColor(imageBackgroundColor);
 
         View textContainer = listItemView.findViewById(R.id.attraction_details_container);
 
         int color = ContextCompat.getColor(getContext(), mColourResourceID);
-
         textContainer.setBackgroundColor(color);
 
         return listItemView;

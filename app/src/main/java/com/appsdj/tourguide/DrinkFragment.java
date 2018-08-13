@@ -17,31 +17,27 @@ public class DrinkFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+
         View rootView = inflater.inflate(R.layout.attraction_list, container, false);
 
         final ArrayList<Attraction> attractions = new ArrayList<Attraction>();
 
-        attractions.add(new Attraction("Wagamama", "Delicious Chinese food","Liverpool One", "5 Wall St, Liverpool L1 8JQ", "0151 655 1001"));
-        attractions.add(new Attraction("Zizzi", "Amazing pizza and pasta", "Liverpool One", "5 Wall St, Liverpool L1 8JQ", "0151 655 1002"));
-        attractions.add(new Attraction("Yeh Rah", "Fantastic Thai and Asian cusine", "Liverpool One", "5 Wall St, Liverpool L1 8JQ", "0151 655 1003"));
-        attractions.add(new Attraction("McDonald's", "Last resort stomach filler", "Liverpool One", "5 Wall St, Liverpool L1 8JQ", "0151 655 1004"));
+        // Add new items in the list of Attractions
+        attractions.add(new Attraction("Berry and Rye", "Great cocktails · Cosy · Casual",
+                "Unit 17, Albert Dock", "Liverpool, L3 4AF", "07305 079675", R.drawable.berry_and_rye));
+        attractions.add(new Attraction("Be At One Liverpool", "Lively bar for spicy cocktails",
+                "11-13 Seel St", "Liverpool, L1 4AU", "0151 203 6101", R.drawable.be_at_one));
+        attractions.add(new Attraction("Revolución de Cuba Liverpool", "Authentic Cuban experience",
+                "48 Berry St", "Liverpool, L1 4JQ", "0151 203 1152", R.drawable.revolucion_cuba));
+        attractions.add(new Attraction("Cavern Pub", "Drink where Beatles launched",
+                "10 Mathew St", "Liverpool, L2 6RE", "0151 656 1004", R.drawable.cavern_pub));
 
-        AttractionAdapter adapter = new AttractionAdapter(getActivity(), attractions, R.color.category_drink);
+        // create the adapter which will handle the list of attractions
+        AttractionAdapter adapter = new AttractionAdapter(getActivity(), attractions, R.color.category_drink, R.color.drink_background);
+
         ListView listView = (ListView) rootView.findViewById(R.id.list);
-
         listView.setAdapter(adapter);
-
-//        // Set a click listener to play the audio when the list item is clicked on
-//        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//            @Override
-//            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
-//
-//                // Get the Attraction object at the particular position clicked
-//                Attraction attraction = attractions.get(position);
-//            }
-//        });
 
         return rootView;
     }
