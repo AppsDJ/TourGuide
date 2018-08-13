@@ -7,14 +7,14 @@ import android.support.v4.app.FragmentPagerAdapter;
 
 public class CategoryAdapter extends FragmentPagerAdapter {
 
-    private Context mContext;
+    private Context context;
 
     public CategoryAdapter(Context context, FragmentManager fm) {
         super(fm);
-        mContext = context;
+        this.context = context;
     }
 
-    // return the fragment at a paticular position corresponding to an activity
+    // return the fragment at a particular position corresponding to an activity
     @Override
     public Fragment getItem(int position) {
         if (position == 0) {
@@ -36,13 +36,13 @@ public class CategoryAdapter extends FragmentPagerAdapter {
     @Override
     public CharSequence getPageTitle(int position) {
         if (position == 0) {
-            return mContext.getString(R.string.category_food);
+            return context.getString(R.string.category_food);
         } else if (position == 1) {
-            return mContext.getString(R.string.category_drink);
+            return context.getString(R.string.category_drink);
         } else if (position == 2) {
-            return mContext.getString(R.string.category_shop);
+            return context.getString(R.string.category_shop);
         } else {
-            return mContext.getString(R.string.category_fun);
+            return context.getString(R.string.category_fun);
         }
     }
 }

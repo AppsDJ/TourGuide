@@ -20,17 +20,24 @@ public class FoodFragment extends Fragment {
 
         View rootView = inflater.inflate(R.layout.attraction_list, container, false);
 
+        // get attraction details from string resources in array format to retrieve:
+        // attractation name, description, address line 1, address line 2, telephone no.
+        String[] zizzi = getResources().getStringArray(R.array.zizzi);
+        String[] cozyClub = getResources().getStringArray(R.array.cozy_club);
+        String[] yehRah = getResources().getStringArray(R.array.yeh_rah);
+        String[] wagamama = getResources().getStringArray(R.array.wagamama);
+
         final ArrayList<Attraction> attractions = new ArrayList<Attraction>();
 
         // Add new items in the list of Attractions
-        attractions.add(new Attraction("Zizzi", "Amazing pizza and pasta",
-                "Liverpool One", "6 Wall St, Liverpool L1 8JQ", "0151 655 1002", R.drawable.zizzi_logo));
-        attractions.add(new Attraction("Cozy Club", "McDonald's posh alternative",
-                "Liverpool One", "8 Wall St, Liverpool L1 8JQ", "0151 655 1004", R.drawable.cosy_club_logo));
-        attractions.add(new Attraction("Yeh Rah", "Fantastic Thai cusine",
-                "Liverpool One", "7 Wall St, Liverpool L1 8JQ", "0151 655 1003", R.drawable.yee_logo));
-        attractions.add(new Attraction("Wagamama", "Delicious Chinese food",
-                "Liverpool One", "5 Wall St, Liverpool L1 8JQ", "0151 655 1001", R.drawable.wagamama_logo));
+        attractions.add(new Attraction(zizzi[0], zizzi[1],
+                zizzi[2], zizzi[3], zizzi[4], R.drawable.zizzi_logo));
+        attractions.add(new Attraction(cozyClub[0], cozyClub[1],
+                cozyClub[2], cozyClub[3], cozyClub[4], R.drawable.cosy_club_logo));
+        attractions.add(new Attraction(yehRah[0], yehRah[1],
+                yehRah[2], yehRah[3], yehRah[4], R.drawable.yee_logo));
+        attractions.add(new Attraction(wagamama[0], wagamama[1],
+                wagamama[2], wagamama[3], wagamama[4], R.drawable.wagamama_logo));
 
         // create the adapter which will handle the list of attractions
         AttractionAdapter adapter = new AttractionAdapter(getActivity(), attractions, R.color.category_food, R.color.food_background);

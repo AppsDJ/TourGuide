@@ -4,4 +4,148 @@
     <string name="category_drink">Drink</string>
     <string name="category_shop">Shop</string>
     <string name="category_fun">Fun</string>
+
+    <string-array name="imax_cinema">
+        <item>Imax Cinema, Odeon</item>
+        <item>Amazing 3D cinema viewing</item>
+        <item>Liverpool One</item>
+        <item>25 Wall St, Liverpool L1 8JQ</item>
+        <item>0151 656 1334</item>
+        <item>Mars</item>
+    </string-array>
+
+    <string-array name="yellow_sub">
+        <item>Yellow Sub</item>
+        <item>A Liverpool amusement center</item>
+        <item>Brunswick Business Park</item>
+        <item>Atlantic Way, Liverpool L3 4BE</item>
+        <item>0844 412 0850</item>
+    </string-array>
+
+    <string-array name="vr_here">
+        <item>VR-HERE</item>
+        <item>Video arcade in Liverpool</item>
+        <item>31 Paul St</item>
+        <item>Liverpool, L3 6DX</item>
+        <item>0151 695 1887</item>
+    </string-array>
+
+    <string-array name="casino">
+        <item>Fun Casino Royale</item>
+        <item>Corporate entertainment fun</item>
+        <item>180 James St</item>
+        <item>Liverpool L1 3RQ</item>
+        <item>0151 657 2332</item>
+    </string-array>
+
+    <string-array name="planets_array">
+        <item>Mercury</item>
+        <item>Venus</item>
+        <item>Earth</item>
+        <item>Mars</item>
+        <item>Mars</item>
+    </string-array>
+
+    <string-array name="zizzi">
+        <item>Zizzi</item>
+        <item>Amazing pizza and pasta</item>
+        <item>Liverpool One</item>
+        <item>6 Wall St, Liverpool L1 8JQ</item>
+        <item>0151 655 1002</item>
+    </string-array>
+
+    <string-array name="cozy_club">
+        <item>Cozy Club</item>
+        <item>McDonald\'s posh alternative</item>
+        <item>Liverpool One</item>
+        <item>7 Wall St, Liverpool L1 8JQ</item>
+        <item>0151 655 1003</item>
+    </string-array>
+
+    <string-array name="wagamama">
+        <item>Yeh Rah</item>
+        <item>Fantastic Thai cusine</item>
+        <item>Liverpool One</item>
+        <item>8 Wall St, Liverpool L1 8JQ</item>
+        <item>0151 655 1004</item>
+    </string-array>
+
+    <string-array name="yeh_rah">
+        <item>Wagamama</item>
+        <item>Delicious Oriental food</item>
+        <item>Liverpool One</item>
+        <item>9 Wall St, Liverpool L1 8JQ</item>
+        <item>0151 655 1005</item>
+    </string-array>
+
+    <string-array name="berry">
+        <item>Berry and Rye</item>
+        <item>Great cocktails · Cosy · Casual</item>
+        <item>Unit 17, Albert Dock</item>
+        <item>Liverpool, L3 4AF</item>
+        <item>07305 079675</item>
+    </string-array>
+
+    <string-array name="be_at_one">
+        <item>Be At One Liverpool</item>
+        <item>Lively bar for spicy cocktails</item>
+        <item>11-13 Seel St</item>
+        <item>Liverpool, L1 4AU</item>
+        <item>0151 203 6101</item>
+    </string-array>
+
+    <string-array name="revolucion">
+        <item>Revolución de Cuba Liverpool</item>
+        <item>Authentic Cuban experience</item>
+        <item>48 Berry St</item>
+        <item>Liverpool, L1 4JQ</item>
+        <item>0151 203 1152</item>
+    </string-array>
+
+    <string-array name="cavern">
+        <item>Cavern Pub</item>
+        <item>Drink where Beatles launched</item>
+        <item>10 Mathew St</item>
+        <item>Liverpool, L2 6RE</item>
+        <item>0151 656 1004</item>
+    </string-array>
+
+
+
+    <string-array name="met_qarter">
+        <item>MetQarter</item>
+        <item>Fashion, Beauty, Food</item>
+        <item>35 Whitechapel</item>
+        <item>Liverpool, L1 6DA</item>
+        <item>0151 645 4456</item>
+    </string-array>
+
+    <string-array name="liv_one">
+        <item>Liverpool One</item>
+        <item>All-in-one shopping trip</item>
+        <item>88 - 90 Paradise Street</item>
+        <item>Liverpool, L1 8JQ</item>
+        <item>0151 644 1001</item>
+    </string-array>
+
+    <string-array name="liv_city">
+        <item>Liverpool City Centre</item>
+        <item>You name it, it's there</item>
+        <item>Church Street</item>
+        <item>Liverpool, L1 4TQ</item>
+        <item>0151 656 5435</item>
+    </string-array>
+
+    <string-array name="bold_st">
+        <item>Bold Street</item>
+        <item>Shop for classics and vintage</item>
+        <item>Bold Street</item>
+        <item>Liverpool, L1 9JL</item>
+        <item>0151 688 2316</item>
+    </string-array>
+
+
 </resources>
+
+
+
